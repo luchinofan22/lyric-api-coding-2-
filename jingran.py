@@ -6,8 +6,9 @@ artist = input("Which artist would you like to find a song from? ")
 
 suggestion = requests.get(f'https://api.lyrics.ovh/suggest/{artist}')
 suggestion = suggestion.json()
-for song in suggestion:
-    print(suggestion['data'][3]['title'])
+print(suggestion)
+for track in suggestion['data']:
+    print(track['title'])
 # lyrics = requests.get(f"https://api.lyrics.ovh/v1/{artist}/{song}")
 # lyrics = lyrics.json()
 #making sure the first half of the lyrics thing doesnt print along with the error
