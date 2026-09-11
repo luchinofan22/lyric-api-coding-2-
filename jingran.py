@@ -5,9 +5,9 @@ if choice == 'a':
     artist = input("Which artist would you like to find a song from? ")
     suggestion = requests.get(f'https://api.lyrics.ovh/suggest/{artist}')
     suggestion = suggestion.json()
-    print(suggestion)
+    # print(suggestion)
     for track in suggestion['data']:
-        print(f"{track['title']} by {track['artist']}")
+        print(f"'{track['title']}' by {track['artist']['name']}")
 
 #lyric finder oooo
 elif choice == 's':
