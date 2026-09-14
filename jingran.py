@@ -4,7 +4,7 @@ import requests
 choice = input("Do you want song recommendations from an artist or the lyrics for a specific song? (a/s): ")
 #suggests songs!
 if choice == 'a':
-    artist = input("Which artist would you like to find a song from? ")
+    artist = input("Which artist would you like to search for? ")
     suggestion = requests.get(f'https://api.lyrics.ovh/suggest/{artist}')
     suggestion = suggestion.json()
     
